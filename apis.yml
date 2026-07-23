@@ -1,8 +1,14 @@
 aid: artofsport
 name: Artofsport
-description: Artofsport is a company surfaced as a portfolio company of lightspeed-venture-partners and
-  added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Art of Sport is a consumer personal-care brand offering a complete line of daily body and skin care
+  products made for athletes, including aluminum-free deodorant, antiperspirant, charcoal shampoo and body
+  wash, bar soap, sunscreen, and hair care. Products are formulated with high-performance skincare science,
+  fresh scents, clean formulas, and natural botanical ingredients. The company sells direct-to-consumer
+  through a Shopify-powered e-commerce storefront at artofsport.com as well as retail distribution. It was
+  surfaced in the API Evangelist network as a portfolio company of Lightspeed Venture Partners. Art of Sport
+  does not publish a first-party developer API; its only machine surface is the Shopify Customer Accounts
+  OpenID Connect / OAuth authorization server exposed at the storefront host.
 url: https://raw.githubusercontent.com/api-evangelist/artofsport/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,14 +16,56 @@ x-backed-by:
 - lightspeed-venture-partners
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
+- Consumer Packaged Goods
+- Personal Care
+- Skincare
+- Body Care
+- Athletics
+- Direct to Consumer
+- E-commerce
+- Shopify
+image: https://artofsport.com/cdn/shop/files/Homepage_Shower.jpg?v=1708036395
 apis: []
+common:
+- type: Website
+  url: https://artofsport.com
+- type: Login
+  url: https://artofsport.com/account/login
+- type: TermsOfService
+  url: https://artofsport.com/policies/terms-of-service
+- type: Blog
+  url: https://artofsport.com/blogs/news
+- type: WellKnown
+  url: well-known/artofsport-well-known.yml
+- type: OpenIDConnect
+  url: well-known/artofsport-openid-configuration.json
+- type: OAuthScopes
+  url: scopes/artofsport-scopes.yml
+- type: DomainSecurity
+  url: security/artofsport-domain-security.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

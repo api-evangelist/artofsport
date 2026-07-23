@@ -1,0 +1,22 @@
+generated: '2026-07-18'
+method: searched
+source: https://artofsport.com/.well-known/
+host: https://artofsport.com
+note: >-
+  Art of Sport runs on Shopify; the only /.well-known discovery surface on the storefront host is the
+  Shopify Customer Accounts OpenID Connect / OAuth 2.0 authorization server (issuer
+  https://shopify.com/authentication/26410184). There is no first-party developer API, security.txt,
+  api-catalog, or ai-plugin.json.
+documents:
+- path: /.well-known/openid-configuration
+  status: 200
+  file: artofsport-openid-configuration.json
+- path: /.well-known/oauth-authorization-server
+  status: 200
+  file: artofsport-oauth-authorization-server.json
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404

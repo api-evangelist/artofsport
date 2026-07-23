@@ -1,0 +1,30 @@
+generated: '2026-07-18'
+method: searched
+source: https://artofsport.com/.well-known/openid-configuration
+note: >-
+  OAuth 2.0 / OIDC scopes are provided by the Shopify Customer Accounts authorization server exposed on
+  the Art of Sport storefront host (issuer https://shopify.com/authentication/26410184). These are
+  Shopify platform scopes for authenticated customer-account access, not a first-party Art of Sport API.
+schemes:
+- name: ShopifyCustomerAccounts
+  type: oauth2
+  source: well-known/artofsport-openid-configuration.json
+  issuer: https://shopify.com/authentication/26410184
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://shopify.com/authentication/26410184/oauth/authorize
+    tokenUrl: https://shopify.com/authentication/26410184/oauth/token
+    pkce: S256
+scopes:
+- scope: openid
+  description: OpenID Connect authentication; returns an ID token identifying the customer.
+  flows: [authorizationCode]
+- scope: email
+  description: Access to the customer's email address and email_verified claim.
+  flows: [authorizationCode]
+- scope: customer-account-api:full
+  description: Full access to the Shopify Customer Account API on behalf of the signed-in customer.
+  flows: [authorizationCode]
+- scope: customer-account-mcp-api:full
+  description: Full access to the Shopify Customer Account MCP API on behalf of the signed-in customer.
+  flows: [authorizationCode]
